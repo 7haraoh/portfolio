@@ -394,6 +394,21 @@
       background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2);
       padding: 0.2rem 0.55rem; border-radius: 4px;
     }
+    .project-status.dev {
+      color: #fbbf24; background: rgba(251,191,36,0.1); border-color: rgba(251,191,36,0.28);
+    }
+    .project-status.dev .pulse { background: #fbbf24; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.1rem; }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.72rem; font-family: var(--mono); color: var(--purple-l);
+      background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.28);
+      padding: 0.32rem 0.7rem; border-radius: 6px; text-decoration: none; transition: all 0.25s;
+    }
+    .project-link:hover {
+      background: rgba(124,58,237,0.22); border-color: var(--purple);
+      color: #fff; transform: translateY(-1px);
+    }
 
     /* ── PROCESS ── */
     #process { background: var(--bg); }
@@ -612,13 +627,19 @@
       <div class="tech-stack fade-in">
         <p class="tech-title" data-i18n="about.tech">Stack principal</p>
         <div class="tech-grid">
+          <div class="tech-badge"><span class="dot"></span>TypeScript</div>
+          <div class="tech-badge"><span class="dot"></span>JavaScript</div>
+          <div class="tech-badge"><span class="dot"></span>React</div>
+          <div class="tech-badge"><span class="dot"></span>Next.js</div>
+          <div class="tech-badge"><span class="dot"></span>Node.js</div>
+          <div class="tech-badge"><span class="dot"></span>C# / .NET</div>
           <div class="tech-badge"><span class="dot"></span>Python</div>
           <div class="tech-badge"><span class="dot"></span>FastAPI</div>
-          <div class="tech-badge"><span class="dot"></span>JavaScript</div>
-          <div class="tech-badge"><span class="dot"></span>HTML / CSS</div>
-          <div class="tech-badge"><span class="dot"></span>SQLite</div>
           <div class="tech-badge"><span class="dot"></span>PostgreSQL</div>
-          <div class="tech-badge"><span class="dot"></span>Node.js</div>
+          <div class="tech-badge"><span class="dot"></span>Supabase</div>
+          <div class="tech-badge"><span class="dot"></span>Tailwind</div>
+          <div class="tech-badge"><span class="dot"></span>Docker</div>
+          <div class="tech-badge"><span class="dot"></span>Linux / SSH</div>
           <div class="tech-badge"><span class="dot"></span>REST APIs</div>
           <div class="tech-badge"><span class="dot"></span>Git</div>
         </div>
@@ -712,10 +733,119 @@
   <div class="section-inner">
     <div class="fade-in">
       <div class="section-tag" data-i18n="projects.tag">// projetos reais</div>
-      <h2 class="section-title" data-i18n="projects.title">O que já foi entregue</h2>
+      <h2 class="section-title" data-i18n="projects.title">O que eu já construí</h2>
       <p class="section-desc" data-i18n="projects.desc">Sistemas completos desenvolvidos do zero, rodando em produção.</p>
     </div>
     <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">🏢</div>
+          <div class="project-status"><span class="pulse"></span><span data-i18n="projects.statusProd">em produção</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name" data-i18n="p4.name">Portal ERP — Gestão Integrada</h3>
+          <p class="project-desc" data-i18n="p4.desc">ERP web para operação de fibra multi-filial: financeiro em partidas dobradas, ciclo completo de compras e conciliação bancária, com controle de acesso por setor.</p>
+          <ul class="project-features">
+            <li data-i18n="p4.f1">Financeiro em partidas dobradas, multi-CNPJ</li>
+            <li data-i18n="p4.f2">Compras ponta a ponta: requisição → cotação → pedido → NF → estoque</li>
+            <li data-i18n="p4.f3">Baixa de títulos com juros, multa e desconto</li>
+            <li data-i18n="p4.f4">Conciliação bancária por importação de OFX</li>
+            <li data-i18n="p4.f5">Aprovação por alçada e trilha de auditoria</li>
+            <li data-i18n="p4.f6">IDE web auditada por desenvolvedor, em containers isolados</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Supabase</span>
+            <span class="tech-pill">Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">🖥️</div>
+          <div class="project-status"><span class="pulse"></span><span data-i18n="projects.statusProd">em produção</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name" data-i18n="p2.name">NOC Signage</h3>
+          <p class="project-desc" data-i18n="p2.desc">Sistema de sinalização digital que comanda uma parede de 6 TVs (3×2) em centro de operações: envio de conteúdo em tempo real, video wall fatiado e controle direto dos televisores por protocolo serial sobre IP.</p>
+          <ul class="project-features">
+            <li data-i18n="p2.f1">Push de conteúdo em tempo real por WebSocket</li>
+            <li data-i18n="p2.f2">Video wall: uma imagem 5760×2160 fatiada nas 6 telas</li>
+            <li data-i18n="p2.f3">Controle das TVs por RS-232C sobre IP: liga/desliga, entrada, brilho</li>
+            <li data-i18n="p2.f4">Digitação remota nas TVs pela API do webOS</li>
+            <li data-i18n="p2.f5">Relay de transmissão ao vivo do YouTube para as telas (HLS)</li>
+            <li data-i18n="p2.f6">Espelho ao vivo de painéis web por navegador headless</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express</span>
+            <span class="tech-pill">WebSocket</span>
+            <span class="tech-pill">ffmpeg</span>
+            <span class="tech-pill">Puppeteer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">📱</div>
+          <div class="project-status"><span class="pulse"></span><span data-i18n="projects.status">entregue</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name" data-i18n="p5.name">Apps de Treino &amp; Dieta (PWA)</h3>
+          <p class="project-desc" data-i18n="p5.desc">Família de três apps instaláveis que funcionam offline: cada um reúne treino, dieta e acompanhamento de progresso para um perfil diferente. Mesmo motor, conteúdo independente.</p>
+          <ul class="project-features">
+            <li data-i18n="p5.f1">PWA instalável, funciona 100% offline (service worker)</li>
+            <li data-i18n="p5.f2">Dados no próprio aparelho, com backup e restauração em JSON</li>
+            <li data-i18n="p5.f3">Análise automática de progresso a cada 15 dias</li>
+            <li data-i18n="p5.f4">Ajustes de compatibilidade para Safari/iOS em aparelho real</li>
+            <li data-i18n="p5.f5">Deploy contínuo por GitHub Actions</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">PWA</span>
+            <span class="tech-pill">Service Worker</span>
+            <span class="tech-pill">LocalStorage</span>
+            <span class="tech-pill">GitHub Actions</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://7haraoh.github.io/plano-hibrido/" target="_blank" rel="noopener noreferrer">↗ Plano Híbrido</a>
+            <a class="project-link" href="https://7haraoh.github.io/plano-fit/" target="_blank" rel="noopener noreferrer">↗ Plano Fit</a>
+            <a class="project-link" href="https://7haraoh.github.io/plano-shape/" target="_blank" rel="noopener noreferrer">↗ Plano Shape</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">⚙️</div>
+          <div class="project-status dev"><span class="pulse"></span><span data-i18n="projects.statusDev">em desenvolvimento</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name" data-i18n="p6.name">Novo Núcleo ERP (.NET)</h3>
+          <p class="project-desc" data-i18n="p6.desc">Reconstrução do núcleo do ERP em .NET: levantamento funcional de dois sistemas legados — 3.815 funcionalidades catalogadas — transformado em arquitetura de 20 módulos entregue em 5 ondas.</p>
+          <ul class="project-features">
+            <li data-i18n="p6.f1">3.815 funcionalidades legadas catalogadas e priorizadas</li>
+            <li data-i18n="p6.f2">Arquitetura de 20 módulos com plano de entrega em 5 ondas</li>
+            <li data-i18n="p6.f3">Multiempresa em duas camadas: filtro global + segurança por linha no banco</li>
+            <li data-i18n="p6.f4">Cadastros unificados: pessoa com papéis, item com tipos</li>
+            <li data-i18n="p6.f5">Estoque e ativos: número de série, comodato, custo médio, curva ABC</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill">C#</span>
+            <span class="tech-pill">.NET 10</span>
+            <span class="tech-pill">ASP.NET Core</span>
+            <span class="tech-pill">EF Core</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Next.js</span>
+          </div>
+        </div>
+      </div>
 
       <div class="project-card fade-in">
         <div class="project-header">
@@ -736,29 +866,6 @@
             <span class="tech-pill">FastAPI</span>
             <span class="tech-pill">HTML/CSS</span>
             <span class="tech-pill">SQLite</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-header">
-          <div class="project-icon">🖥️</div>
-          <div class="project-status"><span class="pulse"></span><span data-i18n="projects.status">entregue</span></div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-name" data-i18n="p2.name">NOC Signage</h3>
-          <p class="project-desc" data-i18n="p2.desc">Sistema de sinalização digital para parede de TVs (3×2) de centro de operações de rede. Controle remoto de conteúdo e layout de video wall.</p>
-          <ul class="project-features">
-            <li data-i18n="p2.f1">Painel de controle para parede de 6 TVs</li>
-            <li data-i18n="p2.f2">Layout configurável em tempo real</li>
-            <li data-i18n="p2.f3">Gerenciamento remoto de conteúdo</li>
-            <li data-i18n="p2.f4">Interface de monitoramento NOC</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">JavaScript</span>
-            <span class="tech-pill">WebSocket</span>
-            <span class="tech-pill">HTML/CSS</span>
           </div>
         </div>
       </div>
@@ -849,7 +956,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">// Fernando Teixeira · ft.dev</div>
-    <div class="footer-copy" data-i18n="footer.copy">© 2025 · Desenvolvedor Autônomo de Sistemas Web</div>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 · Desenvolvedor Autônomo de Sistemas Web</div>
   </div>
 </footer>
 
@@ -899,7 +1006,7 @@ const T = {
     's6.desc': 'Painéis em tempo real para visualização de dados, métricas operacionais e relatórios automáticos.',
     's6.t1':'tempo real','s6.t2':'métricas','s6.t3':'automação',
     'projects.tag':   '// projetos reais',
-    'projects.title': 'O que já foi entregue',
+    'projects.title': 'O que eu já construí',
     'projects.desc':  'Sistemas completos desenvolvidos do zero, rodando em produção.',
     'projects.status':'entregue',
     'p1.name':'Doce Arte',
@@ -909,11 +1016,13 @@ const T = {
     'p1.f3':'Gerenciamento de cardápio em tempo real',
     'p1.f4':'Design responsivo mobile-first',
     'p2.name':'NOC Signage',
-    'p2.desc':'Sistema de sinalização digital para parede de TVs (3×2) de centro de operações de rede. Controle remoto de conteúdo e layout de video wall.',
-    'p2.f1':'Painel de controle para parede de 6 TVs',
-    'p2.f2':'Layout configurável em tempo real',
-    'p2.f3':'Gerenciamento remoto de conteúdo',
-    'p2.f4':'Interface de monitoramento NOC',
+    'p2.desc':'Sistema de sinalização digital que comanda uma parede de 6 TVs (3×2) em centro de operações: envio de conteúdo em tempo real, video wall fatiado e controle direto dos televisores por protocolo serial sobre IP.',
+    'p2.f1':'Push de conteúdo em tempo real por WebSocket',
+    'p2.f2':'Video wall: uma imagem 5760×2160 fatiada nas 6 telas',
+    'p2.f3':'Controle das TVs por RS-232C sobre IP: liga/desliga, entrada, brilho',
+    'p2.f4':'Digitação remota nas TVs pela API do webOS',
+    'p2.f5':'Relay de transmissão ao vivo do YouTube para as telas (HLS)',
+    'p2.f6':'Espelho ao vivo de painéis web por navegador headless',
     'p3.name':'App de Finanças Pessoais',
     'p3.desc':'Aplicativo mobile-first completo para controle financeiro pessoal: onboarding inteligente, orçamento, metas e gráficos — tudo no navegador, sem instalação.',
     'p3.f1':'Onboarding personalizado em 8 etapas (perfil de gastos)',
@@ -923,6 +1032,30 @@ const T = {
     'p3.f5':'Metas financeiras com barra de progresso',
     'p3.f6':'Gráficos mensais e donut por categoria',
     'p3.f7':'Backup e restauração via arquivo JSON',
+    'projects.statusProd':'em produção',
+    'projects.statusDev':'em desenvolvimento',
+    'p4.name':'Portal ERP — Gestão Integrada',
+    'p4.desc':'ERP web para operação de fibra multi-filial: financeiro em partidas dobradas, ciclo completo de compras e conciliação bancária, com controle de acesso por setor.',
+    'p4.f1':'Financeiro em partidas dobradas, multi-CNPJ',
+    'p4.f2':'Compras ponta a ponta: requisição → cotação → pedido → NF → estoque',
+    'p4.f3':'Baixa de títulos com juros, multa e desconto',
+    'p4.f4':'Conciliação bancária por importação de OFX',
+    'p4.f5':'Aprovação por alçada e trilha de auditoria',
+    'p4.f6':'IDE web auditada por desenvolvedor, em containers isolados',
+    'p5.name':'Apps de Treino & Dieta (PWA)',
+    'p5.desc':'Família de três apps instaláveis que funcionam offline: cada um reúne treino, dieta e acompanhamento de progresso para um perfil diferente. Mesmo motor, conteúdo independente.',
+    'p5.f1':'PWA instalável, funciona 100% offline (service worker)',
+    'p5.f2':'Dados no próprio aparelho, com backup e restauração em JSON',
+    'p5.f3':'Análise automática de progresso a cada 15 dias',
+    'p5.f4':'Ajustes de compatibilidade para Safari/iOS em aparelho real',
+    'p5.f5':'Deploy contínuo por GitHub Actions',
+    'p6.name':'Novo Núcleo ERP (.NET)',
+    'p6.desc':'Reconstrução do núcleo do ERP em .NET: levantamento funcional de dois sistemas legados — 3.815 funcionalidades catalogadas — transformado em arquitetura de 20 módulos entregue em 5 ondas.',
+    'p6.f1':'3.815 funcionalidades legadas catalogadas e priorizadas',
+    'p6.f2':'Arquitetura de 20 módulos com plano de entrega em 5 ondas',
+    'p6.f3':'Multiempresa em duas camadas: filtro global + segurança por linha no banco',
+    'p6.f4':'Cadastros unificados: pessoa com papéis, item com tipos',
+    'p6.f5':'Estoque e ativos: número de série, comodato, custo médio, curva ABC',
     'process.tag':   '// como trabalho',
     'process.title': 'Do briefing à entrega',
     'process.desc':  'Processo simples e direto, sem reuniões infinitas.',
@@ -937,7 +1070,7 @@ const T = {
     'contact.title':'Vamos conversar?',
     'contact.desc': 'Tem um projeto em mente? Me conta no WhatsApp. Respondo rápido e sem enrolação.',
     'contact.btn':  'Chamar no WhatsApp',
-    'footer.copy':  '© 2025 · Desenvolvedor Autônomo de Sistemas Web',
+    'footer.copy':  '© 2026 · Desenvolvedor Autônomo de Sistemas Web',
     'wa.msg': 'Olá Fernando, vi seu portfólio e gostaria de conversar sobre um projeto!',
     'page.title': 'Fernando Teixeira — Desenvolvedor de Sistemas',
   },
@@ -982,7 +1115,7 @@ const T = {
     's6.desc': 'Real-time dashboards for data visualization, operational metrics, and automated reports.',
     's6.t1':'real-time','s6.t2':'metrics','s6.t3':'automation',
     'projects.tag':   '// real projects',
-    'projects.title': 'What I\'ve delivered',
+    'projects.title': 'What I\'ve built',
     'projects.desc':  'Full systems built from scratch, running in production.',
     'projects.status':'delivered',
     'p1.name':'Doce Arte',
@@ -992,11 +1125,13 @@ const T = {
     'p1.f3':'Real-time menu management',
     'p1.f4':'Mobile-first responsive design',
     'p2.name':'NOC Signage',
-    'p2.desc':'Digital signage system for a 3×2 TV wall at a network operations center. Remote content control and video wall layout management.',
-    'p2.f1':'Control panel for 6-TV wall display',
-    'p2.f2':'Configurable layout in real time',
-    'p2.f3':'Remote content management',
-    'p2.f4':'NOC monitoring interface',
+    'p2.desc':'Digital signage system driving a 6-TV wall (3×2) in a network operations center: real-time content push, sliced video wall, and direct TV control over serial-over-IP.',
+    'p2.f1':'Real-time content push over WebSocket',
+    'p2.f2':'Video wall: one 5760×2160 image sliced across 6 screens',
+    'p2.f3':'TV control via RS-232C over IP: power, input, brightness',
+    'p2.f4':'Remote text input on the TVs through the webOS API',
+    'p2.f5':'Live YouTube stream relayed to the screens over HLS',
+    'p2.f6':'Live mirroring of web dashboards via headless browser',
     'p3.name':'Personal Finance App',
     'p3.desc':'Full mobile-first app for personal financial control: smart onboarding, budgeting, goals, and charts — all in the browser, no install needed.',
     'p3.f1':'Personalized 8-step onboarding (spending profile)',
@@ -1006,6 +1141,30 @@ const T = {
     'p3.f5':'Financial goals with progress bar',
     'p3.f6':'Monthly bar charts and category donut chart',
     'p3.f7':'Backup and restore via JSON file',
+    'projects.statusProd':'in production',
+    'projects.statusDev':'in development',
+    'p4.name':'ERP Portal — Integrated Management',
+    'p4.desc':'Web ERP for a multi-branch fiber operation: double-entry finance, a full purchasing cycle, and bank reconciliation, with per-department access control.',
+    'p4.f1':'Double-entry finance across multiple legal entities',
+    'p4.f2':'End-to-end purchasing: request → quote → PO → invoice → stock',
+    'p4.f3':'Payment settlement with interest, penalty, and discount',
+    'p4.f4':'Bank reconciliation via OFX import',
+    'p4.f5':'Approval thresholds and a full audit trail',
+    'p4.f6':'Audited web IDE per developer, in isolated containers',
+    'p5.name':'Training & Diet Apps (PWA)',
+    'p5.desc':'A family of three installable apps that work offline: each pairs a workout plan, a diet, and progress tracking for a different profile. Same engine, independent content.',
+    'p5.f1':'Installable PWA, fully offline via service worker',
+    'p5.f2':'Data kept on the device, with JSON backup and restore',
+    'p5.f3':'Automatic progress review every two weeks',
+    'p5.f4':'Safari/iOS compatibility fixes for real-device use',
+    'p5.f5':'Continuous deployment through GitHub Actions',
+    'p6.name':'New ERP Core (.NET)',
+    'p6.desc':'Rebuild of the ERP core in .NET: a functional survey of two legacy systems — 3,815 features catalogued — turned into a 20-module architecture delivered in 5 waves.',
+    'p6.f1':'3,815 legacy features catalogued and prioritized',
+    'p6.f2':'20-module architecture with a 5-wave delivery plan',
+    'p6.f3':'Two-layer multi-tenancy: global filter + row-level security',
+    'p6.f4':'Unified master data: party with roles, item with types',
+    'p6.f5':'Inventory and assets: serial numbers, loaned equipment, average cost, ABC analysis',
     'process.tag':   '// how I work',
     'process.title': 'From brief to delivery',
     'process.desc':  'Simple and direct process — no endless meetings.',
@@ -1020,7 +1179,7 @@ const T = {
     'contact.title':'Let\'s talk?',
     'contact.desc': 'Have a project in mind? Reach out on WhatsApp. I reply fast and get straight to the point.',
     'contact.btn':  'Message on WhatsApp',
-    'footer.copy':  '© 2025 · Freelance Web Systems Developer',
+    'footer.copy':  '© 2026 · Freelance Web Systems Developer',
     'wa.msg': 'Hi Fernando, I saw your portfolio and would like to talk about a project!',
     'page.title': 'Fernando Teixeira — Web Systems Developer',
   }
