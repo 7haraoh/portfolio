@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fernando Teixeira — Desenvolvedor de Sistemas</title>
+  <title>Fernando Teixeira — Analista de Processos · Saúde</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -335,6 +335,9 @@
     }
     .tech-badge:hover { border-color: var(--purple); color: var(--purple-l); background: rgba(124,58,237,0.07); }
     .tech-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--purple); flex-shrink: 0; }
+    .tech-grid + .tech-title { margin-top: 1.5rem; }
+    .tech-badge.learning { border-style: dashed; }
+    .tech-badge.learning .dot { background: transparent; border: 1px solid var(--purple); }
 
     /* ── SERVICES ── */
     #services { background: var(--bg); }
@@ -533,7 +536,7 @@
 
   <ul class="nav-center">
     <li><a href="#about"    data-i18n="nav.about">Sobre</a></li>
-    <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="#services" data-i18n="nav.services">Atuação</a></li>
     <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
     <li><a href="#process"  data-i18n="nav.process">Como trabalho</a></li>
     <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contato</a></li>
@@ -553,7 +556,7 @@
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about"    data-i18n="nav.about"    onclick="closeMenu()">Sobre</a>
-  <a href="#services" data-i18n="nav.services"  onclick="closeMenu()">Serviços</a>
+  <a href="#services" data-i18n="nav.services"  onclick="closeMenu()">Atuação</a>
   <a href="#projects" data-i18n="nav.projects"  onclick="closeMenu()">Projetos</a>
   <a href="#process"  data-i18n="nav.process"   onclick="closeMenu()">Como trabalho</a>
   <a href="#contact"  data-i18n="nav.contact"   onclick="closeMenu()">Contato</a>
@@ -564,11 +567,11 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-tag" data-i18n="hero.tag">// Desenvolvedor Autônomo · Sistemas Web</div>
+    <div class="hero-tag" data-i18n="hero.tag">// Analista de Processos · Faturamento em Saúde</div>
     <h1 class="hero-name">Fernando<br>Teixeira</h1>
     <p class="hero-sub" data-i18n-html="hero.sub">
-      Crio <strong>sistemas web sob medida</strong> para pequenos e médios negócios —
-      do zero à entrega, rápido, funcional e sem enrolação.
+      Mapeio e redesenho <strong>processos de faturamento em saúde</strong> —
+      com a base técnica de quem já construiu ERPs do zero.
     </p>
     <div class="hero-cta-row">
       <a href="#contact" class="btn-primary">
@@ -593,20 +596,19 @@
     <div class="about-grid">
       <div class="about-text fade-in">
         <div class="section-tag" data-i18n="about.tag">// sobre mim</div>
-        <h2 class="section-title" data-i18n-html="about.title">Código que<br>resolve problemas reais</h2>
+        <h2 class="section-title" data-i18n-html="about.title">Processo, sistema<br>e dados na mesma conversa</h2>
         <p data-i18n-html="about.p1">
-          Sou desenvolvedor autônomo especializado em criar <strong>sistemas web completos</strong>
-          para negócios locais. Trabalho do levantamento de requisitos até o produto rodando
-          — sem depender de grandes equipes ou processos lentos.
+          Sou <strong>analista de processos</strong> em uma operadora de saúde, atuando no
+          mapeamento do faturamento de recursos próprios: do atendimento à conta recebida.
         </p>
         <p data-i18n-html="about.p2">
-          Meu foco são sistemas que <strong>simplificam o dia a dia</strong>: controle de estoque,
-          agendamentos, vendas, finanças e painéis administrativos. Sites que os donos do
-          negócio realmente usam.
+          Antes, construí <strong>ERPs do zero</strong> — financeiro, compras e estoque — e
+          cataloguei 3.815 funcionalidades de sistemas legados. Sei traduzir processo em
+          sistema, e sistema em processo.
         </p>
         <p data-i18n-html="about.p3">
-          Entrego projetos completos com <strong>painel administrativo</strong>,
-          interface para clientes e tudo rodando na nuvem ou no servidor do cliente.
+          Hoje estou em formação para <strong>consultoria Tasy</strong>, com foco em faturamento:
+          padrão TISS/TUSS, glosas e Oracle SQL/PL-SQL.
         </p>
         <div class="stats-row">
           <div class="stat-card">
@@ -618,28 +620,34 @@
             <div class="stat-label" data-i18n="about.stat2">Segmentos atendidos</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label" data-i18n="about.stat3">Dedicação autônoma</div>
+            <div class="stat-number" data-i18n="about.stat3n">3.815</div>
+            <div class="stat-label" data-i18n="about.stat3">Funcionalidades catalogadas</div>
           </div>
         </div>
       </div>
 
       <div class="tech-stack fade-in">
-        <p class="tech-title" data-i18n="about.tech">Stack principal</p>
+        <p class="tech-title" data-i18n="about.techProc">Processos &amp; Saúde</p>
         <div class="tech-grid">
-          <div class="tech-badge"><span class="dot"></span>TypeScript</div>
-          <div class="tech-badge"><span class="dot"></span>JavaScript</div>
-          <div class="tech-badge"><span class="dot"></span>React</div>
-          <div class="tech-badge"><span class="dot"></span>Next.js</div>
-          <div class="tech-badge"><span class="dot"></span>Node.js</div>
+          <div class="tech-badge"><span class="dot"></span><span data-i18n="tech.proc1">Mapeamento de processos</span></div>
+          <div class="tech-badge"><span class="dot"></span><span data-i18n="tech.proc2">Levantamento de requisitos</span></div>
+          <div class="tech-badge"><span class="dot"></span><span data-i18n="tech.proc3">Análise funcional</span></div>
+        </div>
+        <p class="tech-title" data-i18n="about.techLearn">Em formação</p>
+        <div class="tech-grid">
+          <div class="tech-badge learning"><span class="dot"></span><span data-i18n="tech.learn1">Tasy · Faturamento</span></div>
+          <div class="tech-badge learning"><span class="dot"></span>TISS / TUSS</div>
+          <div class="tech-badge learning"><span class="dot"></span>Oracle SQL · PL/SQL</div>
+        </div>
+        <p class="tech-title" data-i18n="about.tech">Stack técnica</p>
+        <div class="tech-grid">
+          <div class="tech-badge"><span class="dot"></span>SQL / PostgreSQL</div>
           <div class="tech-badge"><span class="dot"></span>C# / .NET</div>
+          <div class="tech-badge"><span class="dot"></span>TypeScript</div>
+          <div class="tech-badge"><span class="dot"></span>React / Next.js</div>
+          <div class="tech-badge"><span class="dot"></span>Node.js</div>
           <div class="tech-badge"><span class="dot"></span>Python</div>
-          <div class="tech-badge"><span class="dot"></span>FastAPI</div>
-          <div class="tech-badge"><span class="dot"></span>PostgreSQL</div>
-          <div class="tech-badge"><span class="dot"></span>Supabase</div>
-          <div class="tech-badge"><span class="dot"></span>Tailwind</div>
           <div class="tech-badge"><span class="dot"></span>Docker</div>
-          <div class="tech-badge"><span class="dot"></span>Linux / SSH</div>
           <div class="tech-badge"><span class="dot"></span>REST APIs</div>
           <div class="tech-badge"><span class="dot"></span>Git</div>
         </div>
@@ -652,75 +660,75 @@
 <section id="services">
   <div class="section-inner">
     <div class="fade-in">
-      <div class="section-tag" data-i18n="services.tag">// serviços</div>
-      <h2 class="section-title" data-i18n="services.title">O que eu desenvolvo</h2>
-      <p class="section-desc" data-i18n="services.desc">Sistemas completos para negócios que querem organização, controle e presença digital.</p>
+      <div class="section-tag" data-i18n="services.tag">// atuação</div>
+      <h2 class="section-title" data-i18n="services.title">O que eu faço</h2>
+      <p class="section-desc" data-i18n="services.desc">Processo bem mapeado, sistema bem usado e dado confiável — com foco em saúde.</p>
     </div>
     <div class="services-grid">
 
       <div class="service-card fade-in">
-        <div class="service-icon">💈</div>
-        <div class="service-name" data-i18n="s1.name">Sistema para Barbearia</div>
-        <div class="service-desc" data-i18n="s1.desc">Agendamento online, controle de clientes, histórico de cortes e painel para o barbeiro gerenciar tudo pelo celular.</div>
+        <div class="service-icon">📋</div>
+        <div class="service-name" data-i18n="s1.name">Mapeamento de Processos</div>
+        <div class="service-desc" data-i18n="s1.desc">Levantamento do AS-IS com quem executa, identificação de gargalos e retrabalho, e desenho do TO-BE com responsáveis e indicadores.</div>
         <div class="service-tags">
-          <span class="service-tag" data-i18n="s1.t1">agendamento</span>
-          <span class="service-tag" data-i18n="s1.t2">clientes</span>
-          <span class="service-tag" data-i18n="s1.t3">painel admin</span>
+          <span class="service-tag" data-i18n="s1.t1">AS-IS</span>
+          <span class="service-tag" data-i18n="s1.t2">TO-BE</span>
+          <span class="service-tag" data-i18n="s1.t3">gargalos</span>
         </div>
       </div>
 
       <div class="service-card fade-in">
-        <div class="service-icon">🛒</div>
-        <div class="service-name" data-i18n="s2.name">Sistema de Vendas</div>
-        <div class="service-desc" data-i18n="s2.desc">PDV web, carrinho de compras, histórico de pedidos, relatórios de vendas diárias e controle de comissões.</div>
+        <div class="service-icon">🏥</div>
+        <div class="service-name" data-i18n="s2.name">Faturamento em Saúde</div>
+        <div class="service-desc" data-i18n="s2.desc">Ciclo da conta de ponta a ponta: atendimento, lançamento, auditoria, envio do lote, demonstrativo, glosa e recurso.</div>
         <div class="service-tags">
-          <span class="service-tag" data-i18n="s2.t1">PDV</span>
-          <span class="service-tag" data-i18n="s2.t2">pedidos</span>
-          <span class="service-tag" data-i18n="s2.t3">relatórios</span>
+          <span class="service-tag" data-i18n="s2.t1">conta do paciente</span>
+          <span class="service-tag" data-i18n="s2.t2">glosa</span>
+          <span class="service-tag" data-i18n="s2.t3">TISS</span>
         </div>
       </div>
 
       <div class="service-card fade-in">
-        <div class="service-icon">📦</div>
-        <div class="service-name" data-i18n="s3.name">Controle de Estoque</div>
-        <div class="service-desc" data-i18n="s3.desc">Cadastro de produtos, movimentação de entrada/saída, alertas de estoque baixo e relatórios em tempo real.</div>
+        <div class="service-icon">🔎</div>
+        <div class="service-name" data-i18n="s3.name">Levantamento Funcional de Sistemas</div>
+        <div class="service-desc" data-i18n="s3.desc">Catálogo de funcionalidades, regras de negócio e priorização para migrar ou substituir sistemas legados sem perder o que importa.</div>
         <div class="service-tags">
-          <span class="service-tag" data-i18n="s3.t1">produtos</span>
-          <span class="service-tag" data-i18n="s3.t2">movimentação</span>
-          <span class="service-tag" data-i18n="s3.t3">alertas</span>
-        </div>
-      </div>
-
-      <div class="service-card fade-in">
-        <div class="service-icon">💰</div>
-        <div class="service-name" data-i18n="s4.name">Gestão Financeira</div>
-        <div class="service-desc" data-i18n="s4.desc">Controle de receitas e despesas, fluxo de caixa, gráficos de resultados e exportação para planilha.</div>
-        <div class="service-tags">
-          <span class="service-tag" data-i18n="s4.t1">fluxo de caixa</span>
-          <span class="service-tag" data-i18n="s4.t2">DRE</span>
-          <span class="service-tag" data-i18n="s4.t3">gráficos</span>
-        </div>
-      </div>
-
-      <div class="service-card fade-in">
-        <div class="service-icon">🎂</div>
-        <div class="service-name" data-i18n="s5.name">Vitrine + Painel para Pequenos Negócios</div>
-        <div class="service-desc" data-i18n="s5.desc">Site de apresentação para o cliente final + painel administrativo para gerenciar produtos, categorias e pedidos.</div>
-        <div class="service-tags">
-          <span class="service-tag" data-i18n="s5.t1">vitrine web</span>
-          <span class="service-tag" data-i18n="s5.t2">admin</span>
-          <span class="service-tag" data-i18n="s5.t3">catálogo</span>
+          <span class="service-tag" data-i18n="s3.t1">requisitos</span>
+          <span class="service-tag" data-i18n="s3.t2">legado</span>
+          <span class="service-tag" data-i18n="s3.t3">priorização</span>
         </div>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">📊</div>
-        <div class="service-name" data-i18n="s6.name">Dashboard &amp; Monitoramento</div>
-        <div class="service-desc" data-i18n="s6.desc">Painéis em tempo real para visualização de dados, métricas operacionais e relatórios automáticos.</div>
+        <div class="service-name" data-i18n="s4.name">Indicadores &amp; Dashboards</div>
+        <div class="service-desc" data-i18n="s4.desc">Painéis com os números que movem a operação: taxa de glosa, prazo de faturamento, contas paradas por etapa.</div>
         <div class="service-tags">
-          <span class="service-tag" data-i18n="s6.t1">tempo real</span>
-          <span class="service-tag" data-i18n="s6.t2">métricas</span>
-          <span class="service-tag" data-i18n="s6.t3">automação</span>
+          <span class="service-tag" data-i18n="s4.t1">glosa</span>
+          <span class="service-tag" data-i18n="s4.t2">prazos</span>
+          <span class="service-tag" data-i18n="s4.t3">gestão à vista</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">⚙️</div>
+        <div class="service-name" data-i18n="s5.name">Automação &amp; Integrações</div>
+        <div class="service-desc" data-i18n="s5.desc">Consultas SQL, integrações por API e leitura de arquivos XML para eliminar trabalho manual e retrabalho.</div>
+        <div class="service-tags">
+          <span class="service-tag" data-i18n="s5.t1">SQL</span>
+          <span class="service-tag" data-i18n="s5.t2">APIs</span>
+          <span class="service-tag" data-i18n="s5.t3">XML</span>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">🚀</div>
+        <div class="service-name" data-i18n="s6.name">Produtos Próprios</div>
+        <div class="service-desc" data-i18n="s6.desc">Desenvolvo ferramentas próprias para a área da saúde, a partir dos problemas que encontro no dia a dia.</div>
+        <div class="service-tags">
+          <span class="service-tag" data-i18n="s6.t1">produto</span>
+          <span class="service-tag" data-i18n="s6.t2">saúde</span>
+          <span class="service-tag" data-i18n="s6.t3">web</span>
         </div>
       </div>
 
@@ -734,9 +742,35 @@
     <div class="fade-in">
       <div class="section-tag" data-i18n="projects.tag">// projetos reais</div>
       <h2 class="section-title" data-i18n="projects.title">O que eu já construí</h2>
-      <p class="section-desc" data-i18n="projects.desc">Sistemas completos desenvolvidos do zero, rodando em produção.</p>
+      <p class="section-desc" data-i18n="projects.desc">Sistemas que construí do zero — da análise do processo ao código em produção.</p>
     </div>
     <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">⚙️</div>
+          <div class="project-status dev"><span class="pulse"></span><span data-i18n="projects.statusDev">em desenvolvimento</span></div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-name" data-i18n="p6.name">Novo Núcleo ERP (.NET)</h3>
+          <p class="project-desc" data-i18n="p6.desc">Reconstrução do núcleo do ERP em .NET: levantamento funcional de dois sistemas legados — 3.815 funcionalidades catalogadas — transformado em arquitetura de 20 módulos entregue em 5 ondas.</p>
+          <ul class="project-features">
+            <li data-i18n="p6.f1">3.815 funcionalidades legadas catalogadas e priorizadas</li>
+            <li data-i18n="p6.f2">Arquitetura de 20 módulos com plano de entrega em 5 ondas</li>
+            <li data-i18n="p6.f3">Multiempresa em duas camadas: filtro global + segurança por linha no banco</li>
+            <li data-i18n="p6.f4">Cadastros unificados: pessoa com papéis, item com tipos</li>
+            <li data-i18n="p6.f5">Estoque e ativos: número de série, comodato, custo médio, curva ABC</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill">C#</span>
+            <span class="tech-pill">.NET 10</span>
+            <span class="tech-pill">ASP.NET Core</span>
+            <span class="tech-pill">EF Core</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Next.js</span>
+          </div>
+        </div>
+      </div>
 
       <div class="project-card fade-in">
         <div class="project-header">
@@ -823,32 +857,6 @@
 
       <div class="project-card fade-in">
         <div class="project-header">
-          <div class="project-icon">⚙️</div>
-          <div class="project-status dev"><span class="pulse"></span><span data-i18n="projects.statusDev">em desenvolvimento</span></div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-name" data-i18n="p6.name">Novo Núcleo ERP (.NET)</h3>
-          <p class="project-desc" data-i18n="p6.desc">Reconstrução do núcleo do ERP em .NET: levantamento funcional de dois sistemas legados — 3.815 funcionalidades catalogadas — transformado em arquitetura de 20 módulos entregue em 5 ondas.</p>
-          <ul class="project-features">
-            <li data-i18n="p6.f1">3.815 funcionalidades legadas catalogadas e priorizadas</li>
-            <li data-i18n="p6.f2">Arquitetura de 20 módulos com plano de entrega em 5 ondas</li>
-            <li data-i18n="p6.f3">Multiempresa em duas camadas: filtro global + segurança por linha no banco</li>
-            <li data-i18n="p6.f4">Cadastros unificados: pessoa com papéis, item com tipos</li>
-            <li data-i18n="p6.f5">Estoque e ativos: número de série, comodato, custo médio, curva ABC</li>
-          </ul>
-          <div class="project-tech">
-            <span class="tech-pill">C#</span>
-            <span class="tech-pill">.NET 10</span>
-            <span class="tech-pill">ASP.NET Core</span>
-            <span class="tech-pill">EF Core</span>
-            <span class="tech-pill">PostgreSQL</span>
-            <span class="tech-pill">Next.js</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-header">
           <div class="project-icon">🎂</div>
           <div class="project-status"><span class="pulse"></span><span data-i18n="projects.status">entregue</span></div>
         </div>
@@ -905,29 +913,29 @@
   <div class="section-inner">
     <div class="fade-in">
       <div class="section-tag" data-i18n="process.tag">// como trabalho</div>
-      <h2 class="section-title" data-i18n="process.title">Do briefing à entrega</h2>
-      <p class="section-desc" data-i18n="process.desc">Processo simples e direto, sem reuniões infinitas.</p>
+      <h2 class="section-title" data-i18n="process.title">Do processo real ao processo melhor</h2>
+      <p class="section-desc" data-i18n="process.desc">Primeiro entender como o trabalho acontece de verdade; depois mudar.</p>
     </div>
     <div class="process-steps">
       <div class="step-card fade-in">
         <div class="step-number">01</div>
-        <div class="step-name" data-i18n="step1.name">Conversa inicial</div>
-        <div class="step-desc" data-i18n="step1.desc">Você me conta o que precisa. Escuto, pergunto e entendo o negócio antes de escrever uma linha de código.</div>
+        <div class="step-name" data-i18n="step1.name">Entender</div>
+        <div class="step-desc" data-i18n="step1.desc">Converso com quem executa o processo, acompanho a rotina e levanto o problema antes de propor qualquer solução.</div>
       </div>
       <div class="step-card fade-in">
         <div class="step-number">02</div>
-        <div class="step-name" data-i18n="step2.name">Proposta e prazo</div>
-        <div class="step-desc" data-i18n="step2.desc">Envio uma proposta clara: o que será feito, quanto tempo leva e quanto custa. Sem surpresas depois.</div>
+        <div class="step-name" data-i18n="step2.name">Mapear o AS-IS</div>
+        <div class="step-desc" data-i18n="step2.desc">Desenho o fluxo como ele é hoje: etapas, responsáveis, sistemas usados, gargalos e onde nasce o retrabalho.</div>
       </div>
       <div class="step-card fade-in">
         <div class="step-number">03</div>
-        <div class="step-name" data-i18n="step3.name">Desenvolvimento</div>
-        <div class="step-desc" data-i18n="step3.desc">Desenvolvo em etapas e mostro o progresso. Você acompanha e sugere ajustes antes de finalizar.</div>
+        <div class="step-name" data-i18n="step3.name">Desenhar o TO-BE</div>
+        <div class="step-desc" data-i18n="step3.desc">Proponho o fluxo futuro com regras claras, responsáveis definidos e indicadores para medir o resultado.</div>
       </div>
       <div class="step-card fade-in">
         <div class="step-number">04</div>
-        <div class="step-name" data-i18n="step4.name">Entrega e suporte</div>
-        <div class="step-desc" data-i18n="step4.desc">Sistema rodando no ar, com orientação de uso e suporte pós-entrega para garantir que tudo funcione.</div>
+        <div class="step-name" data-i18n="step4.name">Implantar e medir</div>
+        <div class="step-desc" data-i18n="step4.desc">Acompanho a mudança na prática, meço os indicadores e ajusto até o resultado aparecer.</div>
       </div>
     </div>
   </div>
@@ -940,9 +948,9 @@
       <div class="contact-box">
         <div class="contact-emoji">👋</div>
         <h2 data-i18n="contact.title">Vamos conversar?</h2>
-        <p data-i18n="contact.desc">Tem um projeto em mente? Me conta no WhatsApp. Respondo rápido e sem enrolação.</p>
+        <p data-i18n="contact.desc">Quer trocar uma ideia sobre processos, faturamento em saúde ou Tasy? Me chama no WhatsApp.</p>
         <a id="wa-btn"
-          href="https://wa.me/5562982412403?text=Ol%C3%A1%20Fernando%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto!"
+          href="https://wa.me/5562982412403?text=Ol%C3%A1%20Fernando%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!"
           target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span data-i18n="contact.btn">Chamar no WhatsApp</span>
@@ -956,7 +964,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">// Fernando Teixeira · ft.dev</div>
-    <div class="footer-copy" data-i18n="footer.copy">© 2026 · Desenvolvedor Autônomo de Sistemas Web</div>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 · Analista de Processos · Saúde</div>
   </div>
 </footer>
 
@@ -967,47 +975,54 @@
 const T = {
   pt: {
     'nav.about':    'Sobre',
-    'nav.services': 'Serviços',
+    'nav.services': 'Atuação',
     'nav.projects': 'Projetos',
     'nav.process':  'Como trabalho',
     'nav.contact':  'Contato',
-    'hero.tag':     '// Desenvolvedor Autônomo · Sistemas Web',
-    'hero.sub':     'Crio <strong>sistemas web sob medida</strong> para pequenos e médios negócios — do zero à entrega, rápido, funcional e sem enrolação.',
+    'hero.tag':     '// Analista de Processos · Faturamento em Saúde',
+    'hero.sub':     'Mapeio e redesenho <strong>processos de faturamento em saúde</strong> — com a base técnica de quem já construiu ERPs do zero.',
     'hero.cta':     'Falar no WhatsApp',
     'hero.projects':'Ver projetos',
     'about.tag':    '// sobre mim',
-    'about.title':  'Código que<br>resolve problemas reais',
-    'about.p1':     'Sou desenvolvedor autônomo especializado em criar <strong>sistemas web completos</strong> para negócios locais. Trabalho do levantamento de requisitos até o produto rodando — sem depender de grandes equipes ou processos lentos.',
-    'about.p2':     'Meu foco são sistemas que <strong>simplificam o dia a dia</strong>: controle de estoque, agendamentos, vendas, finanças e painéis administrativos. Sites que os donos do negócio realmente usam.',
-    'about.p3':     'Entrego projetos completos com <strong>painel administrativo</strong>, interface para clientes e tudo rodando na nuvem ou no servidor do cliente.',
+    'about.title':  'Processo, sistema<br>e dados na mesma conversa',
+    'about.p1':     'Sou <strong>analista de processos</strong> em uma operadora de saúde, atuando no mapeamento do faturamento de recursos próprios: do atendimento à conta recebida.',
+    'about.p2':     'Antes, construí <strong>ERPs do zero</strong> — financeiro, compras e estoque — e cataloguei 3.815 funcionalidades de sistemas legados. Sei traduzir processo em sistema, e sistema em processo.',
+    'about.p3':     'Hoje estou em formação para <strong>consultoria Tasy</strong>, com foco em faturamento: padrão TISS/TUSS, glosas e Oracle SQL/PL-SQL.',
     'about.stat1':  'Projetos entregues',
     'about.stat2':  'Segmentos atendidos',
-    'about.stat3':  'Dedicação autônoma',
-    'about.tech':   'Stack principal',
-    'services.tag': '// serviços',
-    'services.title':'O que eu desenvolvo',
-    'services.desc':'Sistemas completos para negócios que querem organização, controle e presença digital.',
-    's1.name': 'Sistema para Barbearia',
-    's1.desc': 'Agendamento online, controle de clientes, histórico de cortes e painel para o barbeiro gerenciar tudo pelo celular.',
-    's1.t1':'agendamento','s1.t2':'clientes','s1.t3':'painel admin',
-    's2.name': 'Sistema de Vendas',
-    's2.desc': 'PDV web, carrinho de compras, histórico de pedidos, relatórios de vendas diárias e controle de comissões.',
-    's2.t1':'PDV','s2.t2':'pedidos','s2.t3':'relatórios',
-    's3.name': 'Controle de Estoque',
-    's3.desc': 'Cadastro de produtos, movimentação de entrada/saída, alertas de estoque baixo e relatórios em tempo real.',
-    's3.t1':'produtos','s3.t2':'movimentação','s3.t3':'alertas',
-    's4.name': 'Gestão Financeira',
-    's4.desc': 'Controle de receitas e despesas, fluxo de caixa, gráficos de resultados e exportação para planilha.',
-    's4.t1':'fluxo de caixa','s4.t2':'DRE','s4.t3':'gráficos',
-    's5.name': 'Vitrine + Painel para Pequenos Negócios',
-    's5.desc': 'Site de apresentação para o cliente final + painel administrativo para gerenciar produtos, categorias e pedidos.',
-    's5.t1':'vitrine web','s5.t2':'admin','s5.t3':'catálogo',
-    's6.name': 'Dashboard & Monitoramento',
-    's6.desc': 'Painéis em tempo real para visualização de dados, métricas operacionais e relatórios automáticos.',
-    's6.t1':'tempo real','s6.t2':'métricas','s6.t3':'automação',
+    'about.stat3n': '3.815',
+    'about.stat3':  'Funcionalidades catalogadas',
+    'about.techProc':  'Processos & Saúde',
+    'about.techLearn': 'Em formação',
+    'about.tech':   'Stack técnica',
+    'tech.proc1':   'Mapeamento de processos',
+    'tech.proc2':   'Levantamento de requisitos',
+    'tech.proc3':   'Análise funcional',
+    'tech.learn1':  'Tasy · Faturamento',
+    'services.tag': '// atuação',
+    'services.title':'O que eu faço',
+    'services.desc':'Processo bem mapeado, sistema bem usado e dado confiável — com foco em saúde.',
+    's1.name': 'Mapeamento de Processos',
+    's1.desc': 'Levantamento do AS-IS com quem executa, identificação de gargalos e retrabalho, e desenho do TO-BE com responsáveis e indicadores.',
+    's1.t1':'AS-IS','s1.t2':'TO-BE','s1.t3':'gargalos',
+    's2.name': 'Faturamento em Saúde',
+    's2.desc': 'Ciclo da conta de ponta a ponta: atendimento, lançamento, auditoria, envio do lote, demonstrativo, glosa e recurso.',
+    's2.t1':'conta do paciente','s2.t2':'glosa','s2.t3':'TISS',
+    's3.name': 'Levantamento Funcional de Sistemas',
+    's3.desc': 'Catálogo de funcionalidades, regras de negócio e priorização para migrar ou substituir sistemas legados sem perder o que importa.',
+    's3.t1':'requisitos','s3.t2':'legado','s3.t3':'priorização',
+    's4.name': 'Indicadores & Dashboards',
+    's4.desc': 'Painéis com os números que movem a operação: taxa de glosa, prazo de faturamento, contas paradas por etapa.',
+    's4.t1':'glosa','s4.t2':'prazos','s4.t3':'gestão à vista',
+    's5.name': 'Automação & Integrações',
+    's5.desc': 'Consultas SQL, integrações por API e leitura de arquivos XML para eliminar trabalho manual e retrabalho.',
+    's5.t1':'SQL','s5.t2':'APIs','s5.t3':'XML',
+    's6.name': 'Produtos Próprios',
+    's6.desc': 'Desenvolvo ferramentas próprias para a área da saúde, a partir dos problemas que encontro no dia a dia.',
+    's6.t1':'produto','s6.t2':'saúde','s6.t3':'web',
     'projects.tag':   '// projetos reais',
     'projects.title': 'O que eu já construí',
-    'projects.desc':  'Sistemas completos desenvolvidos do zero, rodando em produção.',
+    'projects.desc':  'Sistemas que construí do zero — da análise do processo ao código em produção.',
     'projects.status':'entregue',
     'p1.name':'Doce Arte',
     'p1.desc':'Sistema web completo para confeitaria artesanal: vitrine pública para clientes e painel administrativo para gerenciar catálogo e pedidos.',
@@ -1057,66 +1072,73 @@ const T = {
     'p6.f4':'Cadastros unificados: pessoa com papéis, item com tipos',
     'p6.f5':'Estoque e ativos: número de série, comodato, custo médio, curva ABC',
     'process.tag':   '// como trabalho',
-    'process.title': 'Do briefing à entrega',
-    'process.desc':  'Processo simples e direto, sem reuniões infinitas.',
-    'step1.name':'Conversa inicial',
-    'step1.desc':'Você me conta o que precisa. Escuto, pergunto e entendo o negócio antes de escrever uma linha de código.',
-    'step2.name':'Proposta e prazo',
-    'step2.desc':'Envio uma proposta clara: o que será feito, quanto tempo leva e quanto custa. Sem surpresas depois.',
-    'step3.name':'Desenvolvimento',
-    'step3.desc':'Desenvolvo em etapas e mostro o progresso. Você acompanha e sugere ajustes antes de finalizar.',
-    'step4.name':'Entrega e suporte',
-    'step4.desc':'Sistema rodando no ar, com orientação de uso e suporte pós-entrega para garantir que tudo funcione.',
+    'process.title': 'Do processo real ao processo melhor',
+    'process.desc':  'Primeiro entender como o trabalho acontece de verdade; depois mudar.',
+    'step1.name':'Entender',
+    'step1.desc':'Converso com quem executa o processo, acompanho a rotina e levanto o problema antes de propor qualquer solução.',
+    'step2.name':'Mapear o AS-IS',
+    'step2.desc':'Desenho o fluxo como ele é hoje: etapas, responsáveis, sistemas usados, gargalos e onde nasce o retrabalho.',
+    'step3.name':'Desenhar o TO-BE',
+    'step3.desc':'Proponho o fluxo futuro com regras claras, responsáveis definidos e indicadores para medir o resultado.',
+    'step4.name':'Implantar e medir',
+    'step4.desc':'Acompanho a mudança na prática, meço os indicadores e ajusto até o resultado aparecer.',
     'contact.title':'Vamos conversar?',
-    'contact.desc': 'Tem um projeto em mente? Me conta no WhatsApp. Respondo rápido e sem enrolação.',
+    'contact.desc': 'Quer trocar uma ideia sobre processos, faturamento em saúde ou Tasy? Me chama no WhatsApp.',
     'contact.btn':  'Chamar no WhatsApp',
-    'footer.copy':  '© 2026 · Desenvolvedor Autônomo de Sistemas Web',
-    'wa.msg': 'Olá Fernando, vi seu portfólio e gostaria de conversar sobre um projeto!',
-    'page.title': 'Fernando Teixeira — Desenvolvedor de Sistemas',
+    'footer.copy':  '© 2026 · Analista de Processos · Saúde',
+    'wa.msg': 'Olá Fernando, vi seu portfólio e gostaria de conversar!',
+    'page.title': 'Fernando Teixeira — Analista de Processos · Saúde',
   },
   en: {
     'nav.about':    'About',
-    'nav.services': 'Services',
+    'nav.services': 'What I do',
     'nav.projects': 'Projects',
     'nav.process':  'How I Work',
     'nav.contact':  'Contact',
-    'hero.tag':     '// Freelance Developer · Web Systems',
-    'hero.sub':     'I build <strong>custom web systems</strong> for small and medium businesses — from scratch to delivery, fast, functional, and no nonsense.',
+    'hero.tag':     '// Process Analyst · Healthcare Billing',
+    'hero.sub':     'I map and redesign <strong>healthcare billing processes</strong> — with the technical background of someone who has built ERPs from scratch.',
     'hero.cta':     'Chat on WhatsApp',
     'hero.projects':'View projects',
     'about.tag':    '// about me',
-    'about.title':  'Code that<br>solves real problems',
-    'about.p1':     'I\'m a freelance developer specialized in building <strong>full-stack web systems</strong> for local businesses. I handle everything from requirements to a working product — no big teams, no slow processes.',
-    'about.p2':     'My focus is systems that <strong>simplify daily operations</strong>: inventory control, scheduling, sales, finance, and admin dashboards. Tools that business owners actually use.',
-    'about.p3':     'I deliver complete projects with <strong>admin panels</strong>, customer-facing interfaces, and everything running on the cloud or the client\'s server.',
+    'about.title':  'Process, systems<br>and data in one conversation',
+    'about.p1':     'I\'m a <strong>process analyst</strong> at a health plan operator, mapping the billing of its own care services: from patient admission to a paid claim.',
+    'about.p2':     'Before that, I built <strong>ERPs from scratch</strong> — finance, purchasing, and inventory — and catalogued 3,815 features of legacy systems. I translate processes into systems, and systems into processes.',
+    'about.p3':     'I\'m now training for <strong>Tasy consulting</strong>, focused on billing: the TISS/TUSS standard, claim denials, and Oracle SQL/PL-SQL.',
     'about.stat1':  'Projects delivered',
     'about.stat2':  'Industries served',
-    'about.stat3':  'Freelance focus',
-    'about.tech':   'Main stack',
-    'services.tag': '// services',
-    'services.title':'What I build',
-    'services.desc':'Complete systems for businesses that want organization, control, and a digital presence.',
-    's1.name': 'Barbershop System',
-    's1.desc': 'Online booking, client management, haircut history, and a mobile-friendly panel for the barber to manage everything.',
-    's1.t1':'scheduling','s1.t2':'clients','s1.t3':'admin panel',
-    's2.name': 'Sales System',
-    's2.desc': 'Web POS, shopping cart, order history, daily sales reports, and commission tracking.',
-    's2.t1':'POS','s2.t2':'orders','s2.t3':'reports',
-    's3.name': 'Inventory Control',
-    's3.desc': 'Product catalog, stock in/out movements, low-stock alerts, and real-time reports.',
-    's3.t1':'products','s3.t2':'movements','s3.t3':'alerts',
-    's4.name': 'Financial Management',
-    's4.desc': 'Income and expense tracking, cash flow, performance charts, and spreadsheet export.',
-    's4.t1':'cash flow','s4.t2':'P&L','s4.t3':'charts',
-    's5.name': 'Storefront + Admin for Small Businesses',
-    's5.desc': 'Public-facing storefront for customers + admin panel to manage products, categories, and orders.',
-    's5.t1':'storefront','s5.t2':'admin','s5.t3':'catalog',
-    's6.name': 'Dashboard & Monitoring',
-    's6.desc': 'Real-time dashboards for data visualization, operational metrics, and automated reports.',
-    's6.t1':'real-time','s6.t2':'metrics','s6.t3':'automation',
+    'about.stat3n': '3,815',
+    'about.stat3':  'Features catalogued',
+    'about.techProc':  'Process & Healthcare',
+    'about.techLearn': 'Currently learning',
+    'about.tech':   'Tech stack',
+    'tech.proc1':   'Process mapping',
+    'tech.proc2':   'Requirements gathering',
+    'tech.proc3':   'Functional analysis',
+    'tech.learn1':  'Tasy · Billing',
+    'services.tag': '// what I do',
+    'services.title':'How I help',
+    'services.desc':'Well-mapped processes, well-used systems, and reliable data — with a healthcare focus.',
+    's1.name': 'Process Mapping',
+    's1.desc': 'AS-IS discovery with the people who do the work, bottleneck and rework analysis, and a TO-BE design with owners and KPIs.',
+    's1.t1':'AS-IS','s1.t2':'TO-BE','s1.t3':'bottlenecks',
+    's2.name': 'Healthcare Billing',
+    's2.desc': 'The patient account end to end: admission, charge capture, audit, claim batch submission, remittance, denials, and appeals.',
+    's2.t1':'patient account','s2.t2':'denials','s2.t3':'TISS',
+    's3.name': 'Functional Systems Analysis',
+    's3.desc': 'Feature catalogs, business rules, and prioritization to migrate or replace legacy systems without losing what matters.',
+    's3.t1':'requirements','s3.t2':'legacy','s3.t3':'prioritization',
+    's4.name': 'KPIs & Dashboards',
+    's4.desc': 'Dashboards with the numbers that drive operations: denial rate, billing lead time, accounts stuck by stage.',
+    's4.t1':'denials','s4.t2':'lead time','s4.t3':'visual management',
+    's5.name': 'Automation & Integrations',
+    's5.desc': 'SQL queries, API integrations, and XML file processing to remove manual work and rework.',
+    's5.t1':'SQL','s5.t2':'APIs','s5.t3':'XML',
+    's6.name': 'Own Products',
+    's6.desc': 'I build my own tools for healthcare, born from problems I run into day to day.',
+    's6.t1':'product','s6.t2':'healthcare','s6.t3':'web',
     'projects.tag':   '// real projects',
     'projects.title': 'What I\'ve built',
-    'projects.desc':  'Full systems built from scratch, running in production.',
+    'projects.desc':  'Systems I built from scratch — from process analysis to code in production.',
     'projects.status':'delivered',
     'p1.name':'Doce Arte',
     'p1.desc':'Full web system for an artisan bakery: public storefront for customers and admin panel to manage catalog and orders.',
@@ -1166,22 +1188,22 @@ const T = {
     'p6.f4':'Unified master data: party with roles, item with types',
     'p6.f5':'Inventory and assets: serial numbers, loaned equipment, average cost, ABC analysis',
     'process.tag':   '// how I work',
-    'process.title': 'From brief to delivery',
-    'process.desc':  'Simple and direct process — no endless meetings.',
-    'step1.name':'Initial conversation',
-    'step1.desc':'You tell me what you need. I listen, ask questions, and understand the business before writing a single line of code.',
-    'step2.name':'Proposal & timeline',
-    'step2.desc':'I send a clear proposal: what will be built, how long it takes, and the cost. No surprises later.',
-    'step3.name':'Development',
-    'step3.desc':'I build in stages and show progress along the way. You follow along and suggest adjustments before finalizing.',
-    'step4.name':'Delivery & support',
-    'step4.desc':'System live and running, with usage guidance and post-delivery support to make sure everything works.',
+    'process.title': 'From the real process to a better one',
+    'process.desc':  'First understand how the work really happens; then change it.',
+    'step1.name':'Understand',
+    'step1.desc':'I talk to the people who run the process, follow the routine, and pin down the problem before proposing any solution.',
+    'step2.name':'Map the AS-IS',
+    'step2.desc':'I draw the flow as it is today: steps, owners, systems used, bottlenecks, and where rework starts.',
+    'step3.name':'Design the TO-BE',
+    'step3.desc':'I propose the future flow with clear rules, defined owners, and KPIs to measure the outcome.',
+    'step4.name':'Roll out and measure',
+    'step4.desc':'I follow the change in practice, track the KPIs, and adjust until the results show up.',
     'contact.title':'Let\'s talk?',
-    'contact.desc': 'Have a project in mind? Reach out on WhatsApp. I reply fast and get straight to the point.',
+    'contact.desc': 'Want to talk processes, healthcare billing, or Tasy? Message me on WhatsApp.',
     'contact.btn':  'Message on WhatsApp',
-    'footer.copy':  '© 2026 · Freelance Web Systems Developer',
-    'wa.msg': 'Hi Fernando, I saw your portfolio and would like to talk about a project!',
-    'page.title': 'Fernando Teixeira — Web Systems Developer',
+    'footer.copy':  '© 2026 · Process Analyst · Healthcare',
+    'wa.msg': 'Hi Fernando, I saw your portfolio and would like to talk!',
+    'page.title': 'Fernando Teixeira — Process Analyst · Healthcare',
   }
 };
 
